@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 ERROR</title>
+     <link rel="shortcut icon" href="assets/a-tab.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #0d1b2a, #1b263b, #415a77);
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e0e1dd;
+        }
+
+        .error h1 {
+            font-size: 10rem;
+            margin: 0;
+            color: #e63946;
+            text-shadow: 0 0 15px #e63946, 0 0 50px #ff006e;
+            font-weight: 600;
+        }
+
+        .planet {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 60% 40%, #d3d3d36f, #aaaaaa5e, #676767);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 3s infinite ease-in-out, spin 8s infinite linear;
+            box-shadow: 0 0 30px #aaa, inset 0 0 15px #d3d3d3;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -48%) scale(1.1);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg) translate(-50%, -50%);
+            }
+
+            100% {
+                transform: rotate(360deg) translate(-50%, -50%);
+            }
+        }
+
+        .btn-custom {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            background: #2a9d8f;
+            color: #fff;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+        }
+
+        .btn-custom:hover {
+            background: #e63946;
+            box-shadow: 0 0 20px #e63946;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+        }
+
+        .active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="position-relative d-inline-block error">
+            <h1 class="fade-in">404</h1>
+            <div class="planet"></div>
+        </div>
+        <p class="message fade-in">Oops! The page you’re looking for is lost.</p>
+        <a href="index.html" class="btn btn-custom fade-in">Return to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeElements = document.querySelectorAll(".fade-in");
+
+            fadeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add("active");
+                }, index * 500); 
+            });
+        });
+    </script>
+</body>
+
+</html>
