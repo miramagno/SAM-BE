@@ -191,36 +191,51 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <body>
 
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"><b>Core</b> Memory</a>
-
-      <!-- Toggle button for mobile view -->
-      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNav()">
-        &#9776; <!-- Hamburger icon -->
-      </a>
-
-
-      <div id="myNav" class="w3-right w3-hide-small">
-        <a href="#about" class="w3-bar-item w3-button">About</a>
-        <a href="#emotions" class="w3-bar-item w3-button">Emotions</a>
-        <a href="#personality" class="w3-bar-item w3-button">Personalities</a>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: rgb(255, 255, 255);">
+  <div class="container">
+    <a class="navbar-brand fs-4 fw-semibold" href="#home" style="color: #000;"><b>Core</b> Memory</a>
+    <button 
+      class="navbar-toggler shadow-none" 
+      type="button" 
+      data-bs-toggle="offcanvas" 
+      data-bs-target="#offcanvasNavbar" 
+      aria-controls="offcanvasNavbar" 
+      aria-label="Toggle navigation"
+      style="border-color: #000;">
+      <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27 fill=%27black%27%3E%3Cpath stroke=%27black%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');"></span>
+    </button>
+    <div 
+      class="sidebar offcanvas offcanvas-end" 
+      style="background-color: rgb(255, 255, 255);" 
+      tabindex="-1" 
+      id="offcanvasNavbar" 
+      aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <button 
+          type="button" 
+          class="btn-close" 
+          style="color: #000;" 
+          data-bs-dismiss="offcanvas" 
+          aria-label="Close">
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav pe-3 justify-content-end text-sm-center flex-grow-1">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#about" style="color: #000;">About Me</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#emotions" style="color: #000;">Emotions</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#personality" style="color: #000;">Personalities</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</nav>
 
-  <script>
-  function toggleNav() {
-    var nav = document.getElementById("myNav");
-    if (nav.classList.contains("w3-hide-small")) {
-      nav.classList.remove("w3-hide-small");
-      nav.classList.add("w3-show");
-    } else {
-      nav.classList.add("w3-hide-small");
-      nav.classList.remove("w3-show");
-    }
-  }
-  </script>
 
 
     <header id="home" id="home">
@@ -448,7 +463,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       <p>Created with love and inspiration</p>
     </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
