@@ -12,7 +12,7 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      color: #333; 
+      color: #333;
     }
 
     #home {
@@ -116,35 +116,28 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+      z-index: 10;
+    }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       width: 40px;
       height: 40px;
       background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
     }
 
-    .card {
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
+    .carousel-control-prev {
+      left: -75px;
     }
 
-    .card:hover {
-      transform: scale(1.05);
+    .carousel-control-next {
+      right: -75px;
     }
 
-    .card-body h5 {
-      font-size: 1.1rem;
-      color: #495057;
-    }
-
-    .carousel-inner .row {
-      margin: 0;
-    }
-
-    .carousel-inner .col-6 {
-      padding: 0 10px;
-    }
 
     #about h2 {
       color: #2c3e50;
@@ -160,7 +153,8 @@
       font-size: 1.75rem;
       font-weight: bold;
     }
-/* 
+
+    /* 
     #news h2 {
       font-size: 2.5rem;
       font-weight: bold;
@@ -181,7 +175,6 @@
     #news .card-text {
       color: #7f8c8d;
     } */
-
   </style>
 </head>
 
@@ -200,7 +193,7 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#athletes">Athlete</a></li>
           <li class="nav-item"><a class="nav-link" href="#sports">Sports</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="#news">News</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
         </ul>
       </div>
     </div>
@@ -267,8 +260,9 @@
   <section id="athletes" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5" style="font-size: 3rem; font-weight: bold; color: #2c3e50;">Philippine Medalists</h2>
-      <p class="text-center mb-5" style="font-size: 1.2rem; color: #7f8c8d;">Celebrate the remarkable achievements of Filipino athletes in the Olympic Games.</p>
-  
+      <p class="text-center mb-5" style="font-size: 1.2rem; color: #7f8c8d;">Celebrate the remarkable achievements of
+        Filipino athletes in the Olympic Games.</p>
+
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col d-flex" data-aos="fade-up">
           <div class="card border-0 rounded-lg overflow-hidden flip-card flex-fill">
@@ -276,12 +270,15 @@
             <div class="card-body d-flex flex-column">
               <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Hidilyn Diaz</h5>
               <p class="card-text" style="font-size: 1.1rem;"><strong>Sport:</strong> Weightlifting</p>
-              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Gold Medal in Women's 55kg Weightlifting (Tokyo 2020)</p>
-              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Hidilyn Diaz made history becoming the first Filipino athlete to win an Olympic gold medal, bringing pride to the nation in the 2020 Tokyo Olympics.</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Gold Medal in Women's 55kg
+                Weightlifting (Tokyo 2020)</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Hidilyn Diaz made history becoming the first
+                Filipino athlete to win an Olympic gold medal, bringing pride to the nation in the 2020 Tokyo Olympics.
+              </p>
             </div>
           </div>
         </div>
-  
+
 
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="100">
           <div class="card border-0 rounded-lg overflow-hidden flip-card flex-fill">
@@ -289,82 +286,153 @@
             <div class="card-body d-flex flex-column">
               <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Nesthy Petecio</h5>
               <p class="card-text" style="font-size: 1.1rem;"><strong>Sport:</strong> Boxing</p>
-              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Silver Medal in Women's Featherweight Boxing (Tokyo 2020)</p>
-              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Nesthy Petecio showcased her talent and resilience, winning a silver medal in women's boxing at the Tokyo 2020 Olympics.</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Silver Medal in Women's
+                Featherweight Boxing (Tokyo 2020)</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Nesthy Petecio showcased her talent and
+                resilience, winning a silver medal in women's boxing at the Tokyo 2020 Olympics.</p>
             </div>
           </div>
         </div>
-  
+
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="200">
           <div class="card border-0 rounded-lg overflow-hidden flip-card flex-fill">
             <img src="img/carlos.jpg" alt="Carlo Paalam" class="card-img-top">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Carlo Paalam</h5>
               <p class="card-text" style="font-size: 1.1rem;"><strong>Sport:</strong> Boxing</p>
-              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Silver Medal in Men's Flyweight Boxing (Tokyo 2020)</p>
-              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Carlo Paalam earned a silver medal in boxing at the Tokyo 2020 Olympics, further cementing the Philippines' strong presence in combat sports.</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Silver Medal in Men's
+                Flyweight Boxing (Tokyo 2020)</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Carlo Paalam earned a silver medal in boxing
+                at the Tokyo 2020 Olympics, further cementing the Philippines' strong presence in combat sports.</p>
             </div>
           </div>
         </div>
-  
+
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="300">
           <div class="card border-0 rounded-lg overflow-hidden flip-card flex-fill">
             <img src="img/eumir.webp" alt="Eumir Marcial" class="card-img-top">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Eumir Marcial</h5>
               <p class="card-text" style="font-size: 1.1rem;"><strong>Sport:</strong> Boxing</p>
-              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Bronze Medal in Men's Middleweight Boxing (Tokyo 2020)</p>
-              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Eumir Marcial clinched a bronze medal in boxing at the Tokyo 2020 Olympics, adding another historic win for Filipino athletes.</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> Bronze Medal in Men's
+                Middleweight Boxing (Tokyo 2020)</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Eumir Marcial clinched a bronze medal in
+                boxing at the Tokyo 2020 Olympics, adding another historic win for Filipino athletes.</p>
             </div>
           </div>
         </div>
-  
+
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="400">
           <div class="card border-0 rounded-lg overflow-hidden flip-card flex-fill">
             <img src="img/margielyn.jpg" alt="Margielyn Didal" class="card-img-top">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Margielyn Didal</h5>
               <p class="card-text" style="font-size: 1.1rem;"><strong>Sport:</strong> Skateboarding</p>
-              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> 7th Place in Women's Street Skateboarding (Tokyo 2020)</p>
-              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Margielyn Didal brought skateboarding to the global stage and inspired young Filipinos with her strong Olympic performance.</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> 7th Place in Women's Street
+                Skateboarding (Tokyo 2020)</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Margielyn Didal brought skateboarding to the
+                global stage and inspired young Filipinos with her strong Olympic performance.</p>
             </div>
           </div>
         </div>
-  
+
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="500">
           <div class="card border-0 rounded-lg overflow-hidden flip-card flex-fill">
             <img src="img/alex.jpg" alt="Alex Eala" class="card-img-top">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Alex Eala</h5>
               <p class="card-text" style="font-size: 1.1rem;"><strong>Sport:</strong> Tennis</p>
-              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> 2022 US Open Girls' Singles Champion</p>
-              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Alex Eala is a rising star in tennis, representing the Philippines with her skill and determination on the international stage.</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Achievement:</strong> 2022 US Open Girls' Singles
+                Champion</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Alex Eala is a rising star in tennis,
+                representing the Philippines with her skill and determination on the international stage.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <section id="sports" class="py-5">
     <div class="container mt-5">
       <h2 class="text-center mb-4 text-uppercase font-weight-bold" style="color: #1d1b1b;">Olympic Sports</h2>
       <p class="text-center" style="font-size: 18px; color: #555;">Explore a variety of Olympic sports</p>
-      <div id="movieCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+
+      <div id="movieCarousel" class="carousel slide position-relative" data-bs-ride="carousel" style="padding: 0 3rem;">
         <div class="carousel-inner" id="carouselInner"></div>
-  
-        
-        <button class="carousel-control-prev position-absolute top-50 translate-middle-y" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev" style="left: -2rem;">
+
+        <button class="carousel-control-prev position-absolute top-50 translate-middle-y" type="button"
+          data-bs-target="#movieCarousel" data-bs-slide="prev" style="left: 0;">
           <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next position-absolute top-50 translate-middle-y" type="button" data-bs-target="#movieCarousel" data-bs-slide="next" style="right: -2rem;">
+        <button class="carousel-control-next position-absolute top-50 translate-middle-y" type="button"
+          data-bs-target="#movieCarousel" data-bs-slide="next" style="right: 0;">
           <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </div>
   </section>
+
+  <section id="events" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="font-size: 2.5rem; font-weight: bold;">Upcoming Olympic Events</h2>
+      <p class="text-center mb-5" style="font-size: 1.2rem; color: #7f8c8d;">Stay updated on the exciting upcoming events in the Olympic Games.</p>
+  
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col d-flex" data-aos="fade-up">
+          <div class="card border-0 rounded-lg overflow-hidden flex-fill" style="min-height: 450px;">
+            <img src="img/event/1.webp" alt="Event 1" class="card-img-top" style="height: 250px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Olympic Basketball Tournament</h5>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Date:</strong> July 24, 2024</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Location:</strong> Paris, France</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Exciting matchups will take place as teams compete for the gold medal in the Olympic Basketball Tournament.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 rounded-lg overflow-hidden flex-fill" style="min-height: 450px;">
+            <img src="img/event/2.jpg" alt="Event 2" class="card-img-top" style="height: 250px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Women's Swimming Finals</h5>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Date:</strong> July 26, 2024</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Location:</strong> Paris, France</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Watch the best female swimmers race for the top spot in the Olympic swimming finals.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 rounded-lg overflow-hidden flex-fill" style="min-height: 450px;">
+            <img src="img/event/3.jpg" alt="Event 3" class="card-img-top" style="height: 250px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Men's Track & Field Finals</h5>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Date:</strong> August 1, 2024</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Location:</strong> Paris, France</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Witness the speed and power of the world's top male athletes competing in the track & field finals.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 rounded-lg overflow-hidden flex-fill" style="min-height: 450px;">
+            <img src="img/event/4.jpg" alt="Event 4" class="card-img-top" style="height: 250px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold;">Gymnastics All-Around Finals</h5>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Date:</strong> August 4, 2024</p>
+              <p class="card-text" style="font-size: 1.1rem;"><strong>Location:</strong> Paris, France</p>
+              <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">The world's best gymnasts will showcase their all-around skills in the finals of the gymnastics event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+  
 
   <footer class="bg-dark text-white py-3">
     <div class="container text-center">
@@ -377,54 +445,53 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1200, 
-    once: true, 
-  });
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
 
   <script>
-      document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-    window.addEventListener('scroll', function () {
-      let currentSection = '';
+      window.addEventListener('scroll', function () {
+        let currentSection = '';
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-          currentSection = section.getAttribute('id');
-        }
-      });
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+          }
+        });
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-          link.classList.add('active');
-        }
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+          }
+        });
       });
     });
-  });
     const sport = [
       { title: "Archery", image: "img/sports/archery.webp" },
       { title: "Boxing", image: "img/sports/boxing.avif" },
       { title: "Figure Skating", image: "img/sports/skate.jpg" },
       { title: "Fencing", image: "img/sports/fencing.webp" },
       { title: "Gymnastics", image: "img/sports/gymnast.jpg" },
-      { title: "Hockey", image: "img/sports/hocky.avif" },
       { title: "Swimming", image: "img/sports/swim.avif" },
       { title: "Surfing", image: "img/sports/surfing.webp" },
       { title: "Table tennis", image: "img/sports/table.jpg" },
       { title: "Weightlifting", image: "img/sports/weigh.webp" }
     ];
 
-    const itemsPerSlide = 4; 
+    const itemsPerSlide = 3;
     const carouselInner = document.getElementById('carouselInner');
 
     for (let i = 0; i < sport.length; i += itemsPerSlide) {
@@ -433,14 +500,14 @@
 
       slideItems.forEach(item => {
         slideContent += `
-            <div class="col-6 col-md-3 mb-4">
-              <div class="card h-100 shadow-sm border-0">
-                <img src="${item.image}" class="card-img-top" alt="${item.title}" style="height: 180px; object-fit: cover;">
-                <div class="card-body text-center">
-                  <h5 class="card-title font-weight-bold">${item.title}</h5>
-                </div>
-              </div>
-            </div>`;
+        <div class="col-10 col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="${item.image}" class="card-img-top" alt="${item.title}" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title font-weight-bold">${item.title}</h5>
+            </div>
+          </div>
+        </div>`;
       });
 
       slideContent += `</div></div>`;
